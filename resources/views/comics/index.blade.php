@@ -6,7 +6,7 @@
 
     <h1>Comics</h1>
 
-    @dump($comics)
+    {{-- @dump($comics) --}}
 
     <table class="table">
         <thead>
@@ -19,19 +19,21 @@
         </thead>
         <tbody>
 
-            @foreach ($comics as $comic)
-                
-                <tr>
-                    <td>{{ $comic->title }}</td>
-                    <td>{{ $comic->series }}</td>
-                    <td>{{ $comic->artists }}</td>
-                    <td><button type="button" class="btn btn-info">Vedi</button></td>
-                </tr>
+          @foreach ($comics as $comic)
+              
+              <tr>
+                  <td>{{ $comic->title }}</td>
+                  <td>{{ $comic->series }}</td>
+                  <td>{{ $comic->artists }}</td>
+                  <td><a href="{{ route('comics.show', $comic->id) }}" type="button" class="btn btn-info">Vedi</a></td>
+              </tr>
 
-            @endforeach
+          @endforeach
 
         </tbody>
-      </table>
+    </table>
+
+    <a href="{{ route('comics.create') }}" type="button" class="btn btn-primary">Add comic</a href="">
 
 </div>
     
