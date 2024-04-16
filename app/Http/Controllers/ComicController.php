@@ -31,7 +31,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
