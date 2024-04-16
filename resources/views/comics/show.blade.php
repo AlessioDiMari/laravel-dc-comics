@@ -49,7 +49,11 @@
     </table>
 
     <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Modifica</a>
-    <a href="" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Elimina</a>
+    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Elimina</button>
+    </form>
 
 
 
