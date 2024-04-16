@@ -4,6 +4,8 @@
     
     <div class="container py-5">
 
+        <h1>Aggiungi un comic</h1>
+
         <form action="{{route('comics.store')}}" method="POST">
 
             @csrf

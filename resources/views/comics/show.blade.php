@@ -48,6 +48,10 @@
         </tbody>
     </table>
 
+    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Modifica</a>
+    <a href="" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Elimina</a>
+
+
 
 </div>
     
