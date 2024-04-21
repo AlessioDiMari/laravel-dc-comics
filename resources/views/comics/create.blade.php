@@ -11,31 +11,66 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
-                <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control @error ('title') is-invalid @enderror" name="title" id="title" aria-describedby="emailHelp" >
+                @error('title')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control" name="description" id="description" aria-describedby="emailHelp" required></textarea>
+                <textarea type="text" class="form-control @error ('description') is-invalid @enderror" name="description" id="description" aria-describedby="emailHelp" ></textarea>
+                @error('description')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Immagine</label>
-                <input type="text" class="form-control" name="thumb" id="thumb" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control @error ('thumb') is-invalid @enderror" name="thumb" id="thumb" aria-describedby="emailHelp" >
+                @error('thumb')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="text" class="form-control" name="price" id="price" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control @error ('price') is-invalid @enderror" name="price" id="price" aria-describedby="emailHelp" >
+                @error('price')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control" name="series" id="series" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control @error ('series') is-invalid @enderror" name="series" id="series" aria-describedby="emailHelp" >
+                @error('series')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Data pubblicazione</label>
-                <input type="date" class="form-control" name="sale_date" id="sale_date" aria-describedby="emailHelp" required>
+                <input type="date" class="form-control @error ('sale_date') is-invalid @enderror" name="sale_date" id="sale_date" aria-describedby="emailHelp" >
+                @error('sale_date')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Tipo</label>
-                <input type="text" class="form-control" name="type" id="type" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control @error ('type') is-invalid @enderror" name="type" id="type" aria-describedby="emailHelp" >
+                @error('type')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="artists" class="form-label">Artisti</label>
