@@ -74,11 +74,21 @@
             </div>
             <div class="mb-3">
                 <label for="artists" class="form-label">Artisti</label>
-                <input type="text" class="form-control" name="artists" id="artists" aria-describedby="emailHelp">
+                <input type="text" class="form-control @error ('artists') is-invalid @enderror" name="artists" id="artists" aria-describedby="emailHelp">
+                @error('artists')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="writers" class="form-label">Scrittori</label>
-                <input type="text" class="form-control" name="writers" id="writers" aria-describedby="emailHelp">
+                <input type="text" class="form-control @error ('writers') is-invalid @enderror" name="writers" id="writers" aria-describedby="emailHelp">
+                @error('writers')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                @enderror
             </div>
 
             <button type="submit" class="btn btn-primary">Aggiungi</button>

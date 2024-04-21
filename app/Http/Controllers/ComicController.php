@@ -120,6 +120,32 @@ class ComicController extends Controller
 
         ] , [
 
+            'title.required'=> "Devin inserire il titolo",
+            'title.max'=> "Devi inserrire massimo :max carateri",
+
+            'description.required'=> "Devi inserire la descrizione",
+            'description.max'=> "Devi inserrire massimo :max carateri",
+
+            'thumb.required'=> "Devi inserire l'url dell'immagine",
+            'thumb.max'=> "Devi inserrire massimo :max carateri",
+
+            'price.required'=> "Devi inserire il prezzo",
+            'price.max'=> "Devi inserrire massimo :max carateri",
+
+            'series.required'=> "Devi inserire la serie",
+            'series.max'=> "Devi inserrire massimo :max carateri",
+
+            'sale_date.required'=> "Devi inserire la data di publicazione",
+            'sale_date.max'=> "Devi inserrire massimo :max carateri",
+
+            'type.required'=> "Devi inserire la tipologia",
+            'type.max'=> "Devi inserrire massimo :max carateri",
+
+            'max'=> "Il campo :attribute deve avere massimo : max caratteri"
+
+        ], [
+            'artists'=>"artisti",
+            'writers'=>"scrittori",
         ])->validate();
         
     }
