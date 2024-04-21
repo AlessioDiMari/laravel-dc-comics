@@ -8,7 +8,7 @@
     {{-- FontAwesome --}}
     <script src="https://kit.fontawesome.com/31a056169f.js" crossorigin="anonymous"></script>
 
-    <title>Titolo</title>
+    <title>DC Comics DB</title>
 
     @vite('resources/js/app.js')
 </head>
