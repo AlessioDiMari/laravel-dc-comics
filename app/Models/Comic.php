@@ -10,6 +10,8 @@ class Comic extends Model
 {
     use HasFactory;
 
-    // la riga del db può essere cancellata con il soft delete
+    // la riga del db può essere cancellata con il soft
     use SoftDeletes;
+
+    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type', 'artists', 'writers'] ;
 }
