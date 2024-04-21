@@ -77,6 +77,8 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
 
+        $this->validation($request->all());
+
         $comic->title = $request->title;
         $comic->description = $request->description;
         $comic->thumb = $request->thumb;
